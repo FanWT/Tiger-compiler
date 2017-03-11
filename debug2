@@ -1,0 +1,306 @@
+ letExp(
+  decList(
+   functionDec(
+    fundecList(
+     fundec(a,
+      fieldList(
+       field(x,
+        int,
+        FALSE),
+       fieldList()),
+      int,
+      letExp(
+       decList(
+        functionDec(
+         fundecList(
+          fundec(b,
+           fieldList(
+            field(y,
+             int,
+             FALSE),
+            fieldList()),
+           int,
+           opExp(
+            PLUS,
+            varExp(
+             simpleVar(x)),
+            varExp(
+             simpleVar(y)))),
+          fundecList())),
+        decList()),
+       seqExp(
+        expList(
+         callExp(b,
+          expList(
+           intExp(3),
+           expList())),
+         expList())))),
+     fundecList())),
+   decList()),
+  seqExp(
+   expList(
+    callExp(printi,
+     expList(
+      callExp(a,
+       expList(
+        intExp(2),
+        expList())),
+      expList())),
+    expList())))
+
+a format: assem=tigermain:
+, dst=(nil), src=(nil)
+result=tigermain:
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x191eed0
+result=pushl %ebp
+
+a format: assem=movl `s0,`d0
+, dst=0x191ef60, src=0x191ef40
+result=movl %esp,%ebp
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x191f040
+result=pushl %ebx
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x191f200
+result=pushl %edx
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x191f2e0
+result=pushl %esi
+
+a format: assem=subl $60,`s0
+, dst=(nil), src=0x191f350
+result=subl $60,%esp
+
+a format: assem=movl $2,`d0
+, dst=0x191e680, src=(nil)
+result=movl $2,%ebx
+
+a format: assem=movl `s0,4(`s1)
+, dst=(nil), src=0x191e7a0
+result=movl %ebp,4(%esp)
+
+a format: assem=movl `s0,0(`s1)
+, dst=(nil), src=0x191e870
+result=movl %ebx,0(%esp)
+
+a format: assem=call `s0
+, dst=0x191e940, src=0x191e920
+result=call a
+
+a format: assem=movl `s0,4(`s1)
+, dst=(nil), src=0x191ea70
+result=movl %ebp,4(%esp)
+
+a format: assem=movl `s0,0(`s1)
+, dst=(nil), src=0x191eb40
+result=movl %eax,0(%esp)
+
+a format: assem=call `s0
+, dst=0x191ec10, src=0x191ebf0
+result=call printi
+
+a format: assem=jmp `d0
+, dst=0x191edf0, src=(nil)
+result=jmp L0
+
+a format: assem=L0:
+, dst=(nil), src=(nil)
+result=L0:
+
+a format: assem=addl $60,`s0
+, dst=(nil), src=0x191f4a0
+result=addl $60,%esp
+
+a format: assem=popl `d0
+, dst=0x191f510, src=(nil)
+result=popl %esi
+
+a format: assem=popl `d0
+, dst=0x191f580, src=(nil)
+result=popl %edx
+
+a format: assem=popl `d0
+, dst=0x191f660, src=(nil)
+result=popl %ebx
+
+a format: assem=movl `s0,`d0
+, dst=0x191f6f0, src=0x191f6d0
+result=movl %ebp,%esp
+
+a format: assem=popl `d0
+, dst=0x191f760, src=(nil)
+result=popl %ebp
+
+a format: assem=ret
+, dst=0x191f920, src=(nil)
+result=ret
+
+a format: assem=a:
+, dst=(nil), src=(nil)
+result=a:
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x1941990
+result=pushl %ebp
+
+a format: assem=movl `s0,`d0
+, dst=0x1941a20, src=0x1941a00
+result=movl %esp,%ebp
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x1941a90
+result=pushl %ebx
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x1941b70
+result=pushl %edx
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x1941be0
+result=pushl %esi
+
+a format: assem=subl $60,`s0
+, dst=(nil), src=0x1941c50
+result=subl $60,%esp
+
+a format: assem=movl $3,`d0
+, dst=0x1941480, src=(nil)
+result=movl $3,%ebx
+
+a format: assem=movl `s0,4(`s1)
+, dst=(nil), src=0x1941530
+result=movl %ebp,4(%esp)
+
+a format: assem=movl `s0,0(`s1)
+, dst=(nil), src=0x1941600
+result=movl %ebx,0(%esp)
+
+a format: assem=call `s0
+, dst=0x19416d0, src=0x19416b0
+result=call b
+
+a format: assem=jmp `d0
+, dst=0x19418b0, src=(nil)
+result=jmp L1
+
+a format: assem=L1:
+, dst=(nil), src=(nil)
+result=L1:
+
+a format: assem=addl $60,`s0
+, dst=(nil), src=0x1941da0
+result=addl $60,%esp
+
+a format: assem=popl `d0
+, dst=0x1941e10, src=(nil)
+result=popl %esi
+
+a format: assem=popl `d0
+, dst=0x1941e80, src=(nil)
+result=popl %edx
+
+a format: assem=popl `d0
+, dst=0x1941f60, src=(nil)
+result=popl %ebx
+
+a format: assem=movl `s0,`d0
+, dst=0x1941ff0, src=0x1941fd0
+result=movl %ebp,%esp
+
+a format: assem=popl `d0
+, dst=0x1942060, src=(nil)
+result=popl %ebp
+
+a format: assem=ret
+, dst=0x191f920, src=(nil)
+result=ret
+
+a format: assem=b:
+, dst=(nil), src=(nil)
+result=b:
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x1957d90
+result=pushl %ebp
+
+a format: assem=movl `s0,`d0
+, dst=0x1957e20, src=0x1957e00
+result=movl %esp,%ebp
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x1957e90
+result=pushl %ebx
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x1957f70
+result=pushl %edx
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x1957fe0
+result=pushl %esi
+
+a format: assem=subl $60,`s0
+, dst=(nil), src=0x1958050
+result=subl $60,%esp
+
+a format: assem=movl 12(`s0),`d0
+, dst=0x1957810, src=0x19577f0
+result=movl 12(%ebp),%eax
+
+a format: assem=movl 8(`s0),`d0
+, dst=0x19578c0, src=0x19578a0
+result=movl 8(%eax),%ebx
+
+a format: assem=movl 8(`s0),`d0
+, dst=0x19579e0, src=0x19579c0
+result=movl 8(%ebp),%eax
+
+a format: assem=addl `s0,`d0
+, dst=0x1957ab0, src=0x1957a90
+result=addl %eax,%ebx
+
+a format: assem=movl `s0,`d0
+, dst=0x1957b60, src=0x1957b40
+result=movl %ebx,%eax
+
+a format: assem=jmp `d0
+, dst=0x1957cb0, src=(nil)
+result=jmp L2
+
+a format: assem=L2:
+, dst=(nil), src=(nil)
+result=L2:
+
+a format: assem=addl $60,`s0
+, dst=(nil), src=0x19581a0
+result=addl $60,%esp
+
+a format: assem=popl `d0
+, dst=0x1958210, src=(nil)
+result=popl %esi
+
+a format: assem=popl `d0
+, dst=0x1958280, src=(nil)
+result=popl %edx
+
+a format: assem=popl `d0
+, dst=0x1958360, src=(nil)
+result=popl %ebx
+
+a format: assem=movl `s0,`d0
+, dst=0x19583f0, src=0x19583d0
+result=movl %ebp,%esp
+
+a format: assem=popl `d0
+, dst=0x1958460, src=(nil)
+result=popl %ebp
+
+a format: assem=ret
+, dst=0x191f920, src=(nil)
+result=ret
+

@@ -1,0 +1,218 @@
+escape 0
+reach nilExp
+a format: assem=tigermain:
+, dst=(nil), src=(nil)
+result=tigermain:
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x194f9e0
+result=pushl %ebp
+
+a format: assem=movl `s0,`d0
+, dst=0x194fa70, src=0x194fa50
+result=movl %esp,%ebp
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x194fb50
+result=pushl %ebx
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x194fc30
+result=pushl %edx
+
+a format: assem=pushl `s0
+, dst=(nil), src=0x194fd10
+result=pushl %esi
+
+a format: assem=subl $60,`s0
+, dst=(nil), src=0x194fd80
+result=subl $60,%esp
+
+a format: assem=movl $10,`d0
+, dst=0x194d7f0, src=(nil)
+result=movl $10,%eax
+
+a format: assem=movl `s0,-4(`s1)
+, dst=(nil), src=0x194d8a0
+result=movl %eax,-4(%ebp)
+
+a format: assem=L4:
+, dst=(nil), src=(nil)
+result=L4:
+
+a format: assem=movl $1,`d0
+, dst=0x194da10, src=(nil)
+result=movl $1,%eax
+
+a format: assem=movl `s0,`d0
+, dst=0x194dac0, src=0x194daa0
+result=movl %eax,%ecx
+
+a format: assem=movl -4(`s0),`d0
+, dst=0x194dbe0, src=0x194dbc0
+result=movl -4(%ebp),%eax
+
+a format: assem=movl $0,`d0
+, dst=0x194dce0, src=(nil)
+result=movl $0,%ebx
+
+a format: assem=cmp `s1,`s0
+, dst=(nil), src=0x194dd90
+result=cmp %ebx,%eax
+
+a format: assem=jge `j0
+, dst=(nil), src=(nil)
+result=jge L6
+
+a format: assem=L7:
+, dst=(nil), src=(nil)
+result=L7:
+
+a format: assem=movl $0,`d0
+, dst=0x194df90, src=(nil)
+result=movl $0,%eax
+
+a format: assem=movl `s0,`d0
+, dst=0x194e040, src=0x194e020
+result=movl %eax,%ecx
+
+a format: assem=L6:
+, dst=(nil), src=(nil)
+result=L6:
+
+a format: assem=movl $0,`d0
+, dst=0x194e1b0, src=(nil)
+result=movl $0,%eax
+
+a format: assem=cmp `s1,`s0
+, dst=(nil), src=0x194e260
+result=cmp %eax,%ecx
+
+a format: assem=je `j0
+, dst=(nil), src=(nil)
+result=je L0
+
+a format: assem=L5:
+, dst=(nil), src=(nil)
+result=L5:
+
+a format: assem=movl -4(`s0),`d0
+, dst=0x194e520, src=0x194e500
+result=movl -4(%ebp),%eax
+
+a format: assem=movl `s0,4(`s1)
+, dst=(nil), src=0x194e640
+result=movl %ebp,4(%esp)
+
+a format: assem=movl `s0,0(`s1)
+, dst=(nil), src=0x194e710
+result=movl %eax,0(%esp)
+
+a format: assem=call `s0
+, dst=0x194e7e0, src=0x194e7c0
+result=call printi
+
+a format: assem=movl $1,`d0
+, dst=0x194e8c0, src=(nil)
+result=movl $1,%ebx
+
+a format: assem=movl -4(`s0),`d0
+, dst=0x194e9e0, src=0x194e9c0
+result=movl -4(%ebp),%eax
+
+a format: assem=subl `s0,`d0
+, dst=0x194ebb0, src=0x194eb90
+result=subl %ebx,%eax
+
+a format: assem=movl `s0,-4(`s1)
+, dst=(nil), src=0x194ec60
+result=movl %eax,-4(%ebp)
+
+a format: assem=movl -4(`s0),`d0
+, dst=0x194ed80, src=0x194ed60
+result=movl -4(%ebp),%eax
+
+a format: assem=movl $2,`d0
+, dst=0x194ee80, src=(nil)
+result=movl $2,%ebx
+
+a format: assem=cmp `s1,`s0
+, dst=(nil), src=0x194ef30
+result=cmp %ebx,%eax
+
+a format: assem=je `j0
+, dst=(nil), src=(nil)
+result=je L1
+
+a format: assem=L2:
+, dst=(nil), src=(nil)
+result=L2:
+
+a format: assem=movl $0,`d0
+, dst=0x194f130, src=(nil)
+result=movl $0,%eax
+
+a format: assem=L3:
+, dst=(nil), src=(nil)
+result=L3:
+
+a format: assem=jmp `d0
+, dst=0x194f3a0, src=(nil)
+result=jmp L4
+
+a format: assem=L1:
+, dst=(nil), src=(nil)
+result=L1:
+
+a format: assem=L0:
+, dst=(nil), src=(nil)
+result=L0:
+
+a format: assem=jmp `d0
+, dst=0x194f5b0, src=(nil)
+result=jmp L8
+
+a format: assem=L9:
+, dst=(nil), src=(nil)
+result=L9:
+
+a format: assem=movl $0,`d0
+, dst=0x194f700, src=(nil)
+result=movl $0,%eax
+
+a format: assem=jmp `d0
+, dst=0x194f900, src=(nil)
+result=jmp L3
+
+a format: assem=L8:
+, dst=(nil), src=(nil)
+result=L8:
+
+a format: assem=addl $60,`s0
+, dst=(nil), src=0x194fed0
+result=addl $60,%esp
+
+a format: assem=popl `d0
+, dst=0x194ff40, src=(nil)
+result=popl %esi
+
+a format: assem=popl `d0
+, dst=0x194ffb0, src=(nil)
+result=popl %edx
+
+a format: assem=popl `d0
+, dst=0x1950020, src=(nil)
+result=popl %ebx
+
+a format: assem=movl `s0,`d0
+, dst=0x19500b0, src=0x1950090
+result=movl %ebp,%esp
+
+a format: assem=popl `d0
+, dst=0x1950120, src=(nil)
+result=popl %ebp
+
+a format: assem=ret
+, dst=0x1950350, src=(nil)
+result=ret
+
